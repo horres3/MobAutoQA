@@ -11,4 +11,10 @@ public class MainClassTest
     {
         Assert.assertEquals( "getLocalNumber doesn't return 14" ,main.getLocalNumber(), 14);
     }
+
+    @Test
+    public void testGetClassNumber() {
+        boolean result = main.getLocalNumber() > 45;
+        Assert.assertTrue("getClassNumber returns value wich less than 45", result);
+    }
 }
