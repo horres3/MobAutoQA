@@ -13,8 +13,17 @@ public class MainClassTest
     }
 
     @Test
-    public void testGetClassNumber() {
+    public void testGetClassNumber()
+    {
         boolean result = main.getLocalNumber() > 45;
         Assert.assertTrue("getClassNumber returns value wich less than 45", result);
+    }
+
+    @Test
+    public void testGetClassString()
+    {
+        String stringToCheck = main.getClassString();
+        boolean result = stringToCheck.contains("hello") || stringToCheck.contains("Hello");
+        Assert.assertTrue("classString's  doesn't contain any of strings: \"hello\" \"Hello\"", result);
     }
 }
